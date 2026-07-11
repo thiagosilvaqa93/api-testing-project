@@ -40,5 +40,27 @@ pytest
 ## 👨‍💻 Author
 
 Thiago Silva
-
 QA Engineer | Test Automation
+## ✅ Test Execution
+
+Command:
+
+pytest
+
+Result:
+
+4 passed
+
+
+## 📂 Project Structure
+
+api-testing-project
+
+├── tests
+│   └── test_users.py
+│
+├── utils
+│   └── api_client.py
+│
+├── requirements.txt
+└── README.md
