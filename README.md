@@ -6,28 +6,46 @@
 
 This project demonstrates API test automation using **Python**, **Pytest**, and **REST API validation**.
 
-The goal of this project is to validate REST API endpoints through automated tests, following QA automation best practices such as:
+The objective is to validate REST API endpoints through automated tests following QA Automation best practices, including:
 
-- Test organization
-- Reusable API client
-- Automated regression testing
-- Continuous Integration with GitHub Actions
-- HTML test reports
+* Test organization
+* Reusable API client
+* Automated regression testing
+* Continuous Integration with GitHub Actions
+* HTML test reports
 
 ---
 
 ## 🛠️ Technologies Used
 
-- Python 3.13
-- Pytest
-- Requests
-- pytest-html
-- GitHub Actions (CI/CD)
-- REST API Testing
+* Python 3.13
+* Pytest
+* Requests
+* pytest-html
+* GitHub Actions (CI/CD)
+* REST API Testing
 
 ---
 
 ## 📂 Project Structure
+
+```
+api-testing-project/
+│
+├── tests/
+│   └── test_users.py
+│
+├── utils/
+│   └── api_client.py
+│
+├── .github/
+│   └── workflows/
+│       └── python-tests.yml
+│
+├── requirements.txt
+├── pytest.ini
+└── README.md
+```
 
 ---
 
@@ -35,10 +53,10 @@ The goal of this project is to validate REST API endpoints through automated tes
 
 The automated tests validate:
 
-✅ API response status codes  
-✅ Response data validation  
-✅ User endpoint behavior  
-✅ REST API communication  
+✅ API response status codes
+✅ Response data validation
+✅ User endpoint behavior
+✅ REST API communication
 
 ---
 
@@ -48,20 +66,85 @@ The automated tests validate:
 
 ```bash
 git clone https://github.com/thiagosilvaqa93/api-testing-project.git
+```
+
+### 2. Navigate to project folder
+
 ```bash
+cd api-testing-project
+```
+
+### 3. Create virtual environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate virtual environment
+
+Mac/Linux:
+
+```bash
+source venv/bin/activate
+```
+
+### 5. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 6. Run automated tests
+
+```bash
+pytest
+```
+
 ---
 
-## 📊 Generate HTML Test Report
+## 📊 HTML Test Report
 
 To generate an HTML test report:
 
 ```bash
 pytest --html=report.html
+```
+
+After execution, an HTML file will be generated containing the test results.
+
 ---
 
-## 📊 Relatório HTML dos Testes
+## 🔄 Continuous Integration (CI/CD)
 
-Para gerar um relatório visual dos testes:
+This project uses **GitHub Actions** for continuous integration.
 
-```bash
-pytest --html=report.html
+Every push or pull request to the `main` branch automatically:
+
+* Installs Python
+* Installs project dependencies
+* Runs automated tests
+* Generates HTML test reports
+* Stores test reports as workflow artifacts
+
+---
+
+## 📈 Future Improvements
+
+* Add API authentication tests
+* Add environment variables using `.env`
+* Add negative test scenarios
+* Add test data management
+* Add Docker support
+* Add test coverage reports
+
+---
+
+## 👨‍💻 Author
+
+**Thiago Silva**
+
+QA Engineer | Software Engineering Student
+
+GitHub:
+https://github.com/thiagosilvaqa93
+
