@@ -1,161 +1,67 @@
+# 🚀 API Testing Automation Project
 
-# 🚀 API Testing Project
+![Python API Tests](https://github.com/thiagosilvaqa93/api-testing-project/actions/workflows/python-tests.yml/badge.svg)
 
-![Python API Tests](https://github.com/thiagosilvaqa93/api-testing-project/actions/workflows/python-tests.yml/badge.svg)# 🚀 API Testing Project
+## 📌 Overview
 
-Automated API testing project developed with **Python**, **Pytest**, and **Requests**.
-The goal of this project is to demonstrate API test automation practices, clean project structure, and reusable API client implementation.
+This project demonstrates API test automation using **Python**, **Pytest**, and **REST API validation**.
+
+The goal of this project is to validate REST API endpoints through automated tests, following QA automation best practices such as:
+
+- Test organization
+- Reusable API client
+- Automated regression testing
+- Continuous Integration with GitHub Actions
+- HTML test reports
 
 ---
 
-## 🛠️ Technologies
+## 🛠️ Technologies Used
 
-* **Python 3.13**
-* **Pytest** - Test framework
-* **Requests** - HTTP client library
-* **Virtual Environment (venv)**
+- Python 3.13
+- Pytest
+- Requests
+- pytest-html
+- GitHub Actions (CI/CD)
+- REST API Testing
 
 ---
 
 ## 📂 Project Structure
 
-```text
-api-testing-project/
-│
-├── tests/
-│   └── test_users.py          # API test cases
-│
-├── utils/
-│   ├── __init__.py
-│   └── api_client.py           # Reusable API client
-│
-├── pytest.ini                  # Pytest configuration
-├── requirements.txt            # Project dependencies
-└── README.md
-```
+---
+
+## 🧪 Test Scenarios
+
+The automated tests validate:
+
+✅ API response status codes  
+✅ Response data validation  
+✅ User endpoint behavior  
+✅ REST API communication  
 
 ---
 
-## ⚙️ Installation
+## ▶️ How to Run Locally
 
-### 1. Clone the repository
-
-```bash
-git clone <repository-url>
-```
-
-### 2. Navigate to the project folder
+### 1. Clone repository
 
 ```bash
-cd api-testing-project
-```
-
-### 3. Create a virtual environment
-
+git clone https://github.com/thiagosilvaqa93/api-testing-project.git
 ```bash
-python -m venv venv
-```
-
-### 4. Activate the virtual environment
-
-#### macOS / Linux
-
-```bash
-source venv/bin/activate
-```
-
-#### Windows
-
-```bash
-venv\Scripts\activate
-```
-
-### 5. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
-## 🧪 Running Tests
+## 📊 Generate HTML Test Report
 
-Execute the test suite with:
+To generate an HTML test report:
 
 ```bash
-python -m pytest
-```
-
-Expected result:
-
-```text
-4 passed
-```
-
+pytest --html=report.html
 ---
 
-## 📌 Test Coverage
+## 📊 Relatório HTML dos Testes
 
-Current automated tests include:
+Para gerar um relatório visual dos testes:
 
-✅ GET requests validation
-✅ HTTP status code verification
-✅ API response validation
-✅ User endpoint testing
-
----
-
-## 🔌 API Client
-
-The project uses a reusable API client located at:
-
-```text
-utils/api_client.py
-```
-
-This approach centralizes API requests and improves:
-
-* Code reuse
-* Maintenance
-* Test readability
-* Scalability
-
-Example:
-
-```python
-from utils.api_client import APIClient
-
-client = APIClient()
-
-response = client.get("/users")
-
-assert response.status_code == 200
-```
-
----
-
-## ⚙️ Pytest Configuration
-
-The project uses `pytest.ini`:
-
-```ini
-[pytest]
-pythonpath = .
-```
-
-This allows internal modules to be imported correctly during test execution.
-
----
-
-## 👨‍💻 Author
-
-**Thiago Silva**
-
-QA Automation / API Testing Project
-
----
-
-## 📄 License
-
-This project is created for learning purposes and portfolio demonstration.
-
+```bash
+pytest --html=report.html
