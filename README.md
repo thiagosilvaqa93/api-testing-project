@@ -144,20 +144,6 @@ This allows internal modules to be imported correctly during test execution.
 
 ---
 
-## 📈 Future Improvements
-
-Planned enhancements:
-
-* Add POST, PUT and DELETE test scenarios
-* Add JSON schema validation
-* Add authentication testing
-* Add environment configuration
-* Generate HTML test reports
-* Integrate CI/CD with GitHub Actions
-* Add Docker support
-
----
-
 ## 👨‍💻 Author
 
 **Thiago Silva**
