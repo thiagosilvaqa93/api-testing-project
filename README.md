@@ -1,4 +1,7 @@
+
 # 🚀 API Testing Project
+
+![Python API Tests](https://github.com/thiagosilvaqa93/api-testing-project/actions/workflows/python-tests.yml/badge.svg)# 🚀 API Testing Project
 
 Automated API testing project developed with **Python**, **Pytest**, and **Requests**.
 The goal of this project is to demonstrate API test automation practices, clean project structure, and reusable API client implementation.
