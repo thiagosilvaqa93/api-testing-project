@@ -15,4 +15,3 @@ class APIClient:
 
     def delete(self, endpoint):
         return requests.delete(self.BASE_URL + endpoint)
-        return requests.delete(self.BASE_URL + endpoint)

@@ -31,3 +31,19 @@ def test_delete_user(api_client):
     response = api_client.delete("/users/1")
 
     assert response.status_code == 200
+
+
+def test_get_invalid_user(api_client):
+    response = api_client.get("/users/9999")
+
+    assert response.status_code == 404
+
+
+def test_create_user_invalid_data(api_client):
+    data = {
+        "email": "invalid"
+    }
+
+    response = api_client.post("/users", data)
+
+    assert response.status_code == 201
