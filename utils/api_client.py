@@ -1,8 +1,14 @@
 import requests
+import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 
 class APIClient:
-    BASE_URL = "https://jsonplaceholder.typicode.com"
+
+    BASE_URL = os.getenv("BASE_URL")
 
     def get(self, endpoint):
         return requests.get(self.BASE_URL + endpoint)
